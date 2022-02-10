@@ -1,21 +1,22 @@
 602.simple-expressions
 
 a.
-/name/text()
+//module/name/text()
 
 b.
-//cycle[="ASIR"]/../name/text()
-
+//cycle[.="NISA"]/../name/text()
+//module[cycle="NISA"]/name/text()
 c.
 //name[../course=2]/text()
+//course[.=2]/../name/text()
 
 d.
 //name[../hoursWeekly>5]/text()
 //module[hoursWeekly>5]/text()
 
 e.
-//name[../cycle="ASIR"and../course=1]/text()
-//module[cycle="ASIR" and course=1]/name/text()
+//name[../cycle="NISA"and../course=1]/text()
+//module[cycle="NISA" and course=1]/name/text()
 f.
 //hoursWeekly[.>3]/text()
 //module[hoursWeekly>3]/hoursWeekly/text()
