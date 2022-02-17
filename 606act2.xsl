@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+<xsl:template match="/">
+  <museos>
+    <xsl:apply-templates />
+  </museos>
+</xsl:template>
+
+<xsl:template match="museum">
+  <museo>
+    <xsl:attribute name="location"><xsl:value-of select="city" /> (<xsl:value-of select="country" />)</xsl:attribute>
+    <xsl:value-of select="name" />
+  </museo>
+</xsl:template>
+
+</xsl:stylesheet>
