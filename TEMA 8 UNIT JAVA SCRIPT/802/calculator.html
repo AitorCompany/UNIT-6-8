@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">  
+     <title>Calculator</title>
+   </head>
+<body>
+    <form action="" name="formulario" method="get">
+    <h2 id="calculator1">First Number</h2>
+    <input type="number" name="numero1">
+    <h2 id="calculator2">Last Number</h2>
+    <input type="number" name="numero2">
+    <h2 id="calculator3">Result:</h2>
+    <input type="button" value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" /><br />
+    <input type="button" value="DIVIDIR" onclick="operaciones('dividir'); return false;" /><br />
+    <input type="text" id="calculator" value="0" />
+</form>
+<script>
+function multiplicar(){
+  m1 = document.getElementById("multiplicando").value;
+  m2 = document.getElementById("multiplicador").value;
+  r = m1*m2;
+  document.getElementById("resultado").value = r;
+}
+</script>   
+</body>
+</html>
