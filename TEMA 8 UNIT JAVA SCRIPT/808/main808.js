@@ -11,6 +11,12 @@ let books = [
   alreadyRead: true,
   }];
 
+  books.sort( (a, b) => {
+  if(a.author <b.author) {
+    return;
+  }
+
+
 for (let i = 0; i < books.length; i++) {
   let book = books[i];
   let bookInfo = book.title + '" by ' + book.author;
