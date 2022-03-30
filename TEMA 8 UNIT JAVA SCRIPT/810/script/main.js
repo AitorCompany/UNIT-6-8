@@ -1,31 +1,27 @@
-let harryPotter = {
-    title: 'Harry Potter 1',
-    author: 'JK Rowling',
-    publishedIn: 1997,
-    alreadyRead: true,
-    cover: 'harrypotter1.jpg'
-};
-let harryPotter2 = {
-    title: 'Harry Potter 2',
-    author: 'JK Rowling',
-    publishedIn: 1998,
-    alreadyRead: false,
-};
-let harryPotter3 = {
-    title: 'Harry Potter 3',
-    author: 'JK Rowling',
-    publishedIn: 1999,
-    alreadyRead: false,
-};
+"use strict"
 
-let harryPotter4 = {
-    title: 'Harry Potter 4',
-    author: 'JK Rowling',
-    publishedIn: 2001,
-    alreadyRead: false,
-};
+let books = [{name: 'Arturo Perez Reverte'}, {name: 'Dona Leon'}];
 
+if (localStorage.getItem('books') === null) {
+    localStorage.setItem('books', JSON.stringify(books));
+}
+else 
+    books = JSON.parse(localStorage.getItem('books'));
 
+function updateAuthors() {
 
-let books = [harryPotter, harryPotter2, harryPotter3];
-books.push(harryPotter4);
+let divAuthors = document.querySelector("#books");
+
+let ul = divBooks = document.querySelector('ul');
+if (ul !==null) {
+    divBooks.removeChild(ul);
+}
+
+ul = document.createElement('ul');
+divBooks.append(ul);
+
+for (let i = 0; i < books.length; i++) {
+let li = document.createElement('li');
+li.innerHTML = `${books[i].name}`;  
+ul.append(li);
+}

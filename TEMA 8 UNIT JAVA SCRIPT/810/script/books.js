@@ -6,51 +6,51 @@
 
 //Creació d'objectes.
 let bookOne = {
-    title: "La sombra del viento",
-    author: "Carlos Ruiz Zafón",
-    publishedIn: 2001,
+    title: "La piedra filosofal",
+    author: "JK Rowling",
+    publishedIn: 2000,
     alreadyRead: true,
-    cover: '1-lsdv.jpg',
+    cover: 'harrypotter1.png',
 };
 
 let bookTwo = {
-    title: "El juego del ángel",
-    author: "Carlos Ruiz Zafón",
-    publishedIn: 2008,
+    title: "La camara secreta",
+    author: "JK Rowling",
+    publishedIn: 2001,
     alreadyRead: true,
-    cover: '2-ejda.jpg',
+    cover: 'harrypotter2.jpg',
 };
 
 let bookThree = {
-    title: "El prisionero del cielo",
-    author: "Carlos Ruiz Zafón",
-    publishedIn: 2011,
+    title: "El prisionero de Azkaban",
+    author: "JK Rowling",
+    publishedIn: 2002,
     alreadyRead: true,
-    cover: '3-epdc.jpg',
+    cover: 'harrypotter3.jpg',
 };
 
 let bookFour = {
-    title: "El laberinto de los espíritus",
-    author: "Carlos Ruiz Zafón",
-    publishedIn: 2016,
+    title: "Caliz del fuego",
+    author: "JK Rowling",
+    publishedIn: 2004,
     alreadyRead: true,
-    cover: '4-elde.jpg',
+    cover: 'harrypotter4.jpg',
 };
 
 let bookFive = {
-    title: "El truco de los espejos",
-    author: "Agatha Christie",
-    publishedIn: 1952,
+    title: "La orden del fenix",
+    author: "JK Rowling",
+    publishedIn: 2007,
     alreadyRead: false,
-    cover: '5-etde.jpg',
+    cover: 'harrypotter5.jpg',
 };
 
 let bookSix = {
-    title: "Un cadáver en la bilioteca",
-    author: "Agatha Christie",
-    publishedIn: 1942,
+    title: "El misterio del principe",
+    author: "JK Rowling",
+    publishedIn: 2009,
     alreadyRead: false,
-    cover: '6-ucelb.jpg',
+    cover: 'harrypotter6.jpeg',
 };
 
 //Array dels llibres.
@@ -63,3 +63,5 @@ let books = [
 ];
 
 books.push(bookSix);
+
+localStorage.setItem('books', JSON.stringify(books));
